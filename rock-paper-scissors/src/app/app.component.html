@@ -1,0 +1,17 @@
+<div *ngIf="!gameStarted">
+    <button (click)="startGame()">Start Game</button>
+</div>
+
+<div *ngIf="gameStarted">
+    <p>Your move: {{ playerMove }}</p>
+    <p>Computer move: {{ computerMove }}</p>
+    <p>Result: {{ result }}</p>
+
+    <button (click)="makeMove('Rock')">Rock</button>
+    <button (click)="makeMove('Paper')">Paper</button>
+    <button (click)="makeMove('Scissors')">Scissors</button>
+
+    <br/>
+    <button (click)="terminateGame()">End Game</button>
+
+</div>
